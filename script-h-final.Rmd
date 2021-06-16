@@ -1,6 +1,6 @@
 
 ---
-title: 'Heritability and spatial distribution of mummies aphids in ears wheat  '
+title: 'Heritability and spatial distribution of aphid mummies on wheat ears'
 author: "C.MELOT ; C.LE BOUAR ; L.RIZZI"
 date: "20/06/2021"
 output:
@@ -27,11 +27,11 @@ library(readr)
 ```
 
 ## Phenotypic data
-Phenotypic data are loaded
+Phenotypic data is loaded
 ```{r}
-setwd("C:/Users/YonaW/Desktop/2A/JRL/analyse R/script/") # modify according to the directory place
+setwd("C:/Users/capuc/Desktop/JRL 2021/script/SCRIPT.JRL") # modify according to the directory place
 
-A<-read.table("donnee/sortie2.csv", sep=";", header = T)
+A<-read.table("sortie2.csv", sep=";", header = T)
 
 
 
@@ -44,7 +44,7 @@ A$passageGD[A$GD=="D"]<-A$passageGD[A$GD=="D"]+0.5
 ```
 
 ## Data visualization
-Vizualisation of the variable wanted. 
+Vizualisation of the variable. 
 For the mummies aphids : "somme_PP_TOTAL"
 For terminal mummies aphids : "somme_Nbpucerons_vides_momies"
 
@@ -54,16 +54,16 @@ For living mummies aphids: "somme_Nbpucerons_parasites"
 A$variable<-A$somme_PP_TOTAL
 variable1<-"somme_PP_TOTAL"
 A$variable=as.numeric(A$variable)
-hist(A$variable)
+hist(A$variable, main=paste("Distribution of", variable1), cex.main=0.9, xlab=variable1, col="pink")
 ```
 
-## Brut cartography 
+##Cartography 
  
 Here is the spatial distribution of the brut cartography. 
 
 ```{r}
 A$passage_inverse<-max(A$passageGD)-A$passageGD
-zp1 <- ggplot(A, aes(x =planche, y =A$passage_inverse, fill = variable))
+zp1 <- ggplot(A, aes(x =planche, y =passage_inverse, fill = variable))
 zp1 <- zp1 + geom_tile()
 zp1 <- zp1 + coord_equal()
 zp1
@@ -131,17 +131,14 @@ names(BLUE)[which(names(BLUE)=="Intercept")]<-names(BLUP)[1]
 BLUE<-BLUE[order(names(BLUE))]
 
 plot(BLUP, BLUE)
-
-
-
 ```
 
 
 ```{r}
 which(BLUP>0.8)
 BLUE[118]
-hist(BLUE)
-hist(BLUP)
+hist(BLUE, col="yellow")
+hist(BLUP, col="orange")
 
 ```
 
@@ -156,7 +153,7 @@ write.table(donnee, "BlueBlupS2.csv", sep=";",col.names = TRUE, row.names = TRUE
 
 
 ## Heritability
-Heritability with and without correction are estimated
+Heritabilities with and without correction are estimated
 
 
 ### Without spatial correction
@@ -169,13 +166,12 @@ mnaif<-lmer(variable ~ rep +(1|Genotype), data=A)
 VG<-as.data.frame(VarCorr(mnaif))$sdcor[1]**2
 VE<-as.data.frame(VarCorr(mnaif))$sdcor[2]**2
 #mnaif
-VG/(VG+VE)#heritability
-
+VG/(VG+VE)#individual heritability
 VG #genotypic variance
 VE #environmental variance
 ```
 
-Design heritability (mean of the two genotype)
+Design heritability (mean of the two genotypes)
 ```{r}
 VG/(VG+VE/2)
 
@@ -192,8 +188,8 @@ getHeritability(m0_A_R)
 
 # Fit spatial covariable
 
-Creation of a covariable to see links between number of mummies independantly of their genotype. 
-The function obtain.spatialtrend is utilised. 
+Creation of a covariable to see links between number of mummies independantly from the genotypes of the wheat. 
+The function obtain.spatialtrend is used. 
 
 ```{r}
 # a value for each plot is created
@@ -232,9 +228,9 @@ zp1 <- zp1 + coord_equal()
 zp1
 ```
 
-File is saved in a csv file. 
 
 ```{r}
+#File is saved in a csv file.
 write.table(ACor, "Covariable.csv", sep=";",col.names = TRUE, row.names = FALSE)
 
 ```
