@@ -5,7 +5,7 @@ planche;/;Number of the level (from 1 to 20)
 passage;/;Number of the way (from 1 to 10)
 G/D;/;Left side /Right side of the plot
 classe_epiaison;/;"Earing stage (1: befor May 1st 2021; 2: between 05/01 and 05/04; 3: between 05/05 and 05/06; 4: between 07/05 and 08/06; After May 8th)"
-stade_pheno;/;"Wheat phenotyping stage (1: befor lateous stage; 2: lateous stage; 3: pateous stage) "
+stade_pheno;/;"Wheat phenotyping stage (1: before lateous stage; 2: lateous stage; 3: pateous stage) "
  Pucerons_parasites ;/;"0: total absence of parasitized aphid ; 1: presence of at least one parasitized aphid"
 Dpucerons1;/;"Number of aphids observed (sacled) on the first ear sample 0: Absence of aphids; 1: only one aphid; 2: 2 to 5 aphids; 3: 6 to 10 aphids; 4 more than 10 aphids"
 Dpucerons2;/;Number of aphids observed (sacled) on the second ear sample
