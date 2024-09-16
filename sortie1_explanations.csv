@@ -1,0 +1,35 @@
+Column name ;Unit ;Meaning 
+rep;/;Number of the repeated genotype (Rep1 or Rep2)
+Genotype;/;Name of the genotype (only the numeric part is important)
+planche;/;Number of the level (from 1 to 20)
+passage;/;Number of the way (from 1 to 10)
+G/D;/;Left side /Right side of the plot
+classe_epiaison;/;"Earing stage (1: befor May 1st 2021; 2: between 05/01 and 05/04; 3: between 05/05 and 05/06; 4: between 07/05 and 08/06; After May 8th)"
+stade_pheno;/;"Wheat phenotyping stage (1: before lateous stage; 2: lateous stage; 3: pateous stage) "
+ Pucerons_parasites ;/;"0: total absence of parasitized aphid ; 1: presence of at least one parasitized aphid"
+Dpucerons1;/;"Number of aphids observed (sacled) on the first ear sample 0: Absence of aphids; 1: only one aphid; 2: 2 to 5 aphids; 3: 6 to 10 aphids; 4 more than 10 aphids"
+Dpucerons2;/;Number of aphids observed (sacled) on the second ear sample
+Dpucerons3;/;Number of aphids observed (sacled) on the third ear sample
+Dpucerons4;/;Number of aphids observed (sacled) on the forth ear sample
+Dpucerons5;/;Number of aphids observed (sacled) on the sixth ear sample
+DpuceronsSac;/;Number of aphids observed (sacled) inside the plastic bag containing the 5 ears
+Dpuceron;/;Mean of the 5 number of aphids found on the 5 ears and inside the bag
+epis_infeste;/;Percentage of the number of infested ears among the 5 samples. An ear is infested if the number of aphids found is superior to 0
+nombre_thrips;/;Number of thrips found on the all the samples + the bag containing the ears
+poids_epis;g;weight of the 5 ear samples
+escargot;/;"0: total absence of snails ; 1: presence of at least one snail"
+coccinelle;/;"0: total absence of ladybugs ; 1: presence of at least one ladybug"
+larve_coccinelle ;/;"0: total absence of ladybug larvae; 1: presence of at least one ladybug larvae"
+cocon_coccinelle ;/;"0: total absence of ladybug egg; 1: presence of at least one ladybug egg"
+moucheron/mouches;/;"0: total absence of flies; 1: presence of at least one fly"
+scarabee;/;"0: total absence of beetles; 1: presence of at least one beelte"
+araignee;/;"0: total absence of spiders; 1: presence of at least one spider"
+syrphe;/;"0: total absence of syrphes; 1: presence of at least one syrphe"
+cecidomyies;/;"0: total absence of swede midges ; 1: presence of at least one swede midge"
+fourmi;/;"0: total absence of ants; 1: presence of at least one ant"
+larve_chrysomele;/;"0: total absence of chrysomelid larvae; 1: presence of at least one chrysomelid larvae"
+papillon;/;"0: total absence of butterflies; 1: presence of at least one butterfly"
+sauterelle/criquet;/;"0: total absence of grasshopers; 1: presence of at least one grasshoper"
+guepe;/;"0: total absence of wasps; 1: presence of at least one wasp"
+larves_cecidomyies;/;"0: total absence of swede midge larvae ; 1: presence of at least one swede midge larvae"
+larves_chrysopes;/;"0: total absence of lacewing larvae ; 1: presence of at least one lacewing larvae"

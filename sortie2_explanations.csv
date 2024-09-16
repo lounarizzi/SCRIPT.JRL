@@ -1,0 +1,32 @@
+Column name ;Unit ;Meaning 
+rep;/;Number of the repeated genotype (Rep1 or Rep2)
+Genotype;/;Name of the genotype (only the numeric part is important)
+planche;/;Number of the level (from 1 to 20)
+passage;/;Number of the way (from 1 to 10)
+G/D;/;Left side /Right side of the plot
+classe_epiaison;/;"Earing stage (1: befor May 1st 2021; 2: between 05/01 and 05/04; 3: between 05/05 and 05/06; 4: between 07/05 and 08/06; After May 8th)"
+stade_pheno;/;"Wheat phenotyping stage (A: before lateous stage; L: lateous stage; P: pateous stage; J: after pateous stage) "
+Nbpucerons_1;/;Number of living aphids on the 1st ear sample 
+Nbpucerons_parasites_1;/;Number of parasitized aphids on the 1st ear sample 
+Nbpucerons_vides_momies_1;/;Number of aphid mummies on the 1st ear sample 
+Nbpucerons_2;/;Number of living aphids on the 2nd ear sample 
+Nbpucerons_parasites_2;/;Number of parasitized aphids on the 2nd ear sample 
+Nbpucerons_vides_momies_2;/;Number of aphid mummies on the  2nd ear sample 
+Nbpucerons_3;/;Number of living aphids on the 3rd ear sample 
+Nbpucerons_parasites_3;/;Number of parasitized aphids on the 3rd ear sample 
+Nbpucerons_vides_momies_3;/;Number of aphid mummies on the 3rd ear sample 
+Nbpucerons_4;/;Number of living aphids on the 4th ear sample 
+Nbpucerons_parasites_4;g;Number of parasitized aphids on the 4th ear sample 
+Nbpucerons_vides_momies_4;/;Number of aphid mummies on the 4th ear sample 
+Nbpucerons_5;/;Number of living aphids on the 5th ear sample 
+Nbpucerons_parasites_5;/;Number of parasitized aphids on the 5th ear sample 
+Nbpucerons_vides_momies_5;/;Number of aphid mummies on the 5th ear sample 
+Nbpucerons_SAC;/;Number of living aphids inside the plastic bag containing the 5 ear samples
+Nbpucerons_parasites_SAC;/;Number of parasitized aphids inside the plastic bag containing the 5 ear samples
+Nbpucerons_vides_momies_SAC;/;Number of aphid mummmies inside the plastic bag containing the 5 ear samples
+poids_epis;/;Weight of the 5 ear samples
+somme_Nbpucerons;/;sum of the living aphids on all 5 ear samples
+somme_Nbpucerons_parasites;/;sum of the parasitized aphids on all 5 ear samples
+somme_Nbpucerons_vides_momies;/;sum of the aphid mummies on all 5 ear samples
+somme_PP_TOTAL;/;sum of both parasitized and aphid mummies
+PP;/;"0: total absence of parasitized aphids or aphid mummies; 1: at least one parasitized aphid or one aphid mummy"
